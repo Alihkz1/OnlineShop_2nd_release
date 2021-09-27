@@ -1,0 +1,35 @@
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+    [routerLink]="['/landing-page']" style="cursor: pointer">
+    <mat-icon>shop</mat-icon>
+  </button>
+  <span style="font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: 'Lobster', cursive;font-size: 20px;">Ali store</span>
+
+  <div *ngIf="!loggedIn">
+    <button class="auth" mat-button [matMenuTriggerFor]="menu">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <a mat-menu-item [routerLink]="['/login']">Login</a>
+      <a mat-menu-item [routerLink]="['/register']">Registeration</a>
+    </mat-menu>
+    <a class="auth" mat-button [routerLink]="['/about']">About</a>
+  </div>
+
+  <div *ngIf="loggedIn">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="['/shopping-list']">
+        <mat-icon>shopping_cart</mat-icon>
+        <span>Shop List</span>
+      </button>
+      <button mat-menu-item (click)="onLogOut()">
+        <mat-icon>logout</mat-icon>
+        <span>Log Out</span>
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>

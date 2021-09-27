@@ -1,0 +1,31 @@
+<body>
+  <div class="container">
+    <div class="row bg-light" id="data">
+      <div class="col-md-7">
+        <img [src]="product.imageUrl" [alt]="product.name">
+      </div>
+        <div class="col-md-4 text-center">
+          <h1>{{ product.name }}</h1>
+          <br>
+          <div class="row">
+              <p>{{ product.description }}</p>
+          </div>
+        </div>
+    </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p id="price"><strong>{{ product.price }} $</strong></p>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-md">
+          <button *ngIf="!addedToShoppingList" mat-raised-button color="primary" (click)="onAddToList()">
+            Add to shopping list
+          </button>
+          <button mat-raised-button color="accent" (click)="onBack()">
+            Back
+          </button>
+        </div>
+      </div>
+    </div>

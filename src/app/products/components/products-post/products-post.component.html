@@ -1,0 +1,25 @@
+<body>
+  <div class="container">
+    <div class="row">
+  
+      <div class="col-md-7">
+        <h1><Strong>Post  New Product to server</Strong></h1>
+        <form [formGroup]="PostForm">
+          <formly-form [form]="PostForm" [fields]="fields" [model]="model">
+          </formly-form>
+          <button mat-fab color="primary" aria-label="Example icon button with a plus one icon"
+            (click)="onPostData()">Post
+          </button>
+          <button mat-fab color="warn" aria-label="Example icon button with a plus one icon" (click)=" onClearForm()">
+            Clear
+          </button>
+          <button mat-fab color="warn" aria-label="Example icon button with a plus one icon" (click)="onBack()">Back
+          </button>
+        </form>
+      </div>
+      <div class="col-md-5">
+        <img src="../../../../assets/images/post.svg" alt="">
+      </div>
+    </div>
+  </div>
+</body>

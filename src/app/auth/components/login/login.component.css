@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Glory:wght@500&display=swap");
+
+body {
+  background-color: #d8e2fc;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.col-md-7{
+  margin-top: 100px;
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 20px 20px;
+  border-radius: 50%;
+}
+mat-card{
+  border-radius: 10px;
+  background-color: #eda7ff;
+}
+mat-card mat-card-title {
+  font-weight: bold;
+  font-family: "Glory", sans-serif;
+  color: #000;
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+mat-card p  ,#move-text{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Glory", sans-serif;
+  margin-top: 20px;
+}
+
+mat-card mat-card-title {
+  margin-top: 30px;
+  font-family: "Glory", sans-serif;
+}
+mat-card button {
+  width: 100%;
+  margin-top: 70px;
+  border-radius: 30px;
+  background-color: #d8e2fc;
+}
+#move{
+  background-color: #d8e2fc;
+  border-radius: 30px;
+  font-family: "Glory", sans-serif;
+  margin-top: 30px;
+  width: 110px;
+  
+
+}
+#move-text{
+  margin-top: 30px;
+  
+}
+img {
+  width: 75%;
+}
+@media (max-width: 995px) {
+  mat-card {
+    width: 350px;
+    height: 1100px;
+  }
+  body {
+    height: 180vh;
+  }
+  .col-md-7 {
+    display: none;
+  }
+  mat-card button {
+    margin-left: none;
+    margin-top: none;
+  }
+  form {
+    border-radius: 0%;
+  }
+}
+@media (min-width: 995px) {
+  #min {
+    display: none;
+  }
+}

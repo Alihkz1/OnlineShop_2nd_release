@@ -1,0 +1,26 @@
+.card {
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  padding: 100px;
+}
+
+.title {
+  color: rgb(47, 0, 255);
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 32px;
+  color: rgb(255, 67, 67);
+}
+.container{
+  background: linear-gradient(to right, #ec28cb, #12e7dd);
+  height : 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+}

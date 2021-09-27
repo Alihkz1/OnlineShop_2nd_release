@@ -1,0 +1,14 @@
+<br /><br /><br />
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <h3><b> Shopping List </b></h3>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of shoppingList">
+          {{ item.name }} <br />
+          {{ item.price }} $
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<body>
+  <div class="container">
+    <div class="row">
+      <form [formGroup]="loginForm">
+        <div class="col-md-7 text-center">
+          <img src="../../../../assets/signin.svg" alt="" />
+          <div class="row">
+            <div class="col-sm-5">
+              <p id="move-text">new here?</p>
+            </div>
+            <div class="col-sm-7">
+              <button
+              class="mx-auto text-dark"
+              mat-raised-button
+              id="move"
+              (click)="onGoReg()"
+            >
+              join us for free
+            </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <mat-card class="example-card text-center">
+            <mat-card-title>login</mat-card-title>
+            <mat-card-content>
+              <p>login now and book your favorite foods</p>
+              <formly-form [form]="loginForm" [fields]="fields" [model]="model">
+              </formly-form>
+              <br />
+              <button mat-raised-button class="text-dark" (click)="onLogin()">
+                Login
+              </button>
+              <p id="min">No account ? click <a href="/register">here</a></p>
+            </mat-card-content>
+            <mat-card-actions> </mat-card-actions>
+          </mat-card>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>

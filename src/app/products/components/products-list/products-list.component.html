@@ -1,0 +1,13 @@
+<mat-card class="example-card text-center" [routerLink]="['../detail', products._id]">
+  <img mat-card-image *ngIf="products.imageUrl != '' && products.imageUrl !='test' ; else noImage" [src]="products.imageUrl"
+    [alt]="products.name">
+  <ng-template #noImage>
+    <img src="../../../../assets/images/payment.svg" [alt]="products.name" >
+  </ng-template>
+  <mat-card-content>
+    <p>{{products.name}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button class="btn btn-primary">let's go</button>
+   </mat-card-actions>
+</mat-card>
