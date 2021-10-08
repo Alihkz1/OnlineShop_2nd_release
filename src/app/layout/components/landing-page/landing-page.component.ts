@@ -1,23 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { Router} from '@angular/router';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
-  styleUrls: ['./landing-page.component.css']
+  styleUrls: ['./landing-page.component.css'],
 })
 export class LandingPageComponent implements OnInit {
+  constructor(private router: Router) {}
 
-  constructor(private router: Router) { }
-
-  ngOnInit(): void {
+  ngOnInit(): void {}
+  onLogin() {
+    this.router.navigate(['login']);
   }
-  onLogin(){
-      this.router.navigate(['login']);
-  }
-  onReg(){
+  onReg() {
     this.router.navigate(['register']);
-}
- goMain(){
-  this.router.navigate(['products']);
- }
+  }
+  goMain() {
+    this.router.navigate(['products']);
+  }
 }

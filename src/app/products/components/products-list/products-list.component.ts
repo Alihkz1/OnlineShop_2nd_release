@@ -13,9 +13,7 @@ export class ProductsListComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private productService: ProductsService
-  ) { }
+  ) {}
 
-  ngOnInit(): void {
-
-   }
+  ngOnInit(): void {}
 }

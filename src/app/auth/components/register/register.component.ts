@@ -1,86 +1,86 @@
-import { Component, OnInit } from "@angular/core";
-import { FormGroup } from "@angular/forms";
-import { Router } from "@angular/router";
-import { FormlyFieldConfig } from "@ngx-formly/core";
-import { AuthService } from "../../shared/auth.service";
+import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { FormlyFieldConfig } from '@ngx-formly/core';
+import { AuthService } from '../../shared/auth.service';
 
 @Component({
-  selector: "app-register",
-  templateUrl: "./register.component.html",
-  styleUrls: ["./register.component.css"],
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
   registerForm = new FormGroup({});
   model = {
-    username: "",
-    password: "",
-    firstName: "",
-    lastName: "",
-    phoneNumber: "",
-    email: "",
+    username: '',
+    password: '',
+    firstName: '',
+    lastName: '',
+    phoneNumber: '',
+    email: '',
   };
- fields: FormlyFieldConfig[] = [
+  fields: FormlyFieldConfig[] = [
     {
-      key: "username",
-      type: "input",
+      key: 'username',
+      type: 'input',
       templateOptions: {
-        appearance: "outline",
-        label: "User Name",
-        placeholder: "Enter your User name",
+        appearance: 'outline',
+        label: 'User Name',
+        placeholder: 'Enter your User name',
         required: true,
       },
     },
     {
-      key: "password",
-      type: "input",
+      key: 'password',
+      type: 'input',
       templateOptions: {
-        appearance: "outline",
-        label: "password",
-        type: "password",
-        placeholder: "at least 8 characters",
+        appearance: 'outline',
+        label: 'password',
+        type: 'password',
+        placeholder: 'at least 8 characters',
         required: true,
       },
     },
     {
-      key: "firstName",
-      type: "input",
+      key: 'firstName',
+      type: 'input',
       templateOptions: {
-        appearance: "outline",
-        label: "First Name",
-        placeholder: "Enter your First name",
+        appearance: 'outline',
+        label: 'First Name',
+        placeholder: 'Enter your First name',
         required: true,
       },
     },
     {
-      key: "lastName",
-      type: "input",
+      key: 'lastName',
+      type: 'input',
       templateOptions: {
-        appearance: "outline",
-        label: "last Name",
-        type: "name",
-        placeholder: "Enter your last name",
+        appearance: 'outline',
+        label: 'last Name',
+        type: 'name',
+        placeholder: 'Enter your last name',
         required: true,
       },
     },
     {
-      key: "phoneNumber",
-      type: "input",
+      key: 'phoneNumber',
+      type: 'input',
       templateOptions: {
-        appearance: "outline",
-        label: "phone Number",
-        type: "tel",
-        placeholder: "Enter your phone number",
+        appearance: 'outline',
+        label: 'phone Number',
+        type: 'tel',
+        placeholder: 'Enter your phone number',
         required: true,
       },
     },
     {
-      key: "email",
-      type: "input",
+      key: 'email',
+      type: 'input',
       templateOptions: {
-        appearance: "outline",
-        label: "email Adress",
-        type: "email",
-        placeholder: "example@email.com",
+        appearance: 'outline',
+        label: 'email Adress',
+        type: 'email',
+        placeholder: 'example@email.com',
         required: true,
       },
     },
@@ -100,14 +100,14 @@ export class RegisterComponent implements OnInit {
       )
       .subscribe(
         (response: any) => {
-          this.router.navigate(["/main"]);
-        },
+          this.router.navigate(['/main']);
+        }
         // (error) => {
 
         // }
       );
   }
-    onGoLog(){
+  onGoLog() {
     this.router.navigate(['/login']);
   }
 }

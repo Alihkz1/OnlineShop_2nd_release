@@ -4,6 +4,6 @@ mat-toolbar{
  height: 50px;
 
 }
-mat-toolbar :hover{
-  background: rgba(102, 186, 255, 0.335);
+body :hover{
+  background: rgba(255, 224, 175, 0.335);
 }

@@ -20,7 +20,7 @@ export class ProductsDetailComponent implements OnInit {
     private route: ActivatedRoute,
     private productService: ProductsService,
     private snackBar: MatSnackBar
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.getDetail();

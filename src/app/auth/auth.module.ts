@@ -8,30 +8,22 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyMaterialModule } from '@ngx-formly/material';
-import {MatIconModule} from '@angular/material/icon';
-import {MatCardModule} from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
-  declarations: [
-    LoginComponent,
-    RegisterComponent,
-    
-  ],
+  declarations: [LoginComponent, RegisterComponent],
   imports: [
     CommonModule,
     MatIconModule,
-        MatInputModule,
-        MatButtonModule,
-        MatSnackBarModule,
-        ReactiveFormsModule,
-        FormlyModule.forRoot(),
-        FormlyMaterialModule,
-        MatCardModule
-        
+    MatInputModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    ReactiveFormsModule,
+    FormlyModule.forRoot(),
+    FormlyMaterialModule,
+    MatCardModule,
   ],
-  exports: [
-    LoginComponent,
-    RegisterComponent
-  ]
+  exports: [LoginComponent, RegisterComponent],
 })
-export class AuthModule { }
+export class AuthModule {}

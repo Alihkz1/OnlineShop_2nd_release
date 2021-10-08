@@ -5,24 +5,11 @@ import { HeaderComponent } from './components/header/header.component';
 import { HeaderModule } from './components/header/header.module';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { RouterModule } from '@angular/router';
-import {MatCardModule} from '@angular/material/card';
-
-
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
-  declarations: [
-    LandingPageComponent,
-    HeaderComponent,
-    AboutUsComponent
-  ],
-  imports: [
-    CommonModule,
-    HeaderModule,
-    RouterModule,
-    MatCardModule
-  ],
-  exports: [
-    HeaderComponent
-  ]
+  declarations: [LandingPageComponent, HeaderComponent, AboutUsComponent],
+  imports: [CommonModule, HeaderModule, RouterModule, MatCardModule],
+  exports: [HeaderComponent],
 })
-export class LayoutModule { }
+export class LayoutModule {}

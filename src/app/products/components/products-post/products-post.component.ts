@@ -7,7 +7,7 @@ import { FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-products-post',
   templateUrl: './products-post.component.html',
-  styleUrls: ['./products-post.component.css']
+  styleUrls: ['./products-post.component.css'],
 })
 export class ProductsPostComponent implements OnInit {
   PostForm = new FormGroup({});
@@ -16,91 +16,98 @@ export class ProductsPostComponent implements OnInit {
     imageUrl: '',
     description: '',
     price: '',
-    count: ''
+    count: '',
   };
   fields: FormlyFieldConfig[] = [
     {
       key: 'name',
       type: 'input',
       templateOptions: {
-        appearance: "outline",
+        appearance: 'outline',
         label: 'Name',
         type: 'name',
         placeholder: 'Enter name',
-        required: true
-      }
+        required: true,
+      },
     },
     {
       key: 'imageUrl',
       type: 'input',
       templateOptions: {
-        appearance: "outline",
+        appearance: 'outline',
         label: 'image Url',
         placeholder: 'enter url',
-        required: true
-      }
+        required: true,
+      },
     },
     {
       key: 'description',
       type: 'input',
       templateOptions: {
-        appearance: "outline",
+        appearance: 'outline',
         label: 'description',
         type: 'description',
         placeholder: 'Enter desc',
-        required: true
-      }
+        required: true,
+      },
     },
     {
       key: 'price',
       type: 'input',
       templateOptions: {
-        appearance: "outline",
+        appearance: 'outline',
         label: 'price',
         type: 'price',
         placeholder: 'Enter price',
-        required: true
-      }
+        required: true,
+      },
     },
     {
       key: 'count',
       type: 'input',
       templateOptions: {
-        appearance: "outline",
+        appearance: 'outline',
         label: 'count',
         type: 'count',
         placeholder: 'Enter count',
-        required: true
+        required: true,
       },
-    }
+    },
   ];
 
-  constructor(private router: Router,
+  constructor(
+    private router: Router,
     private snackBar: MatSnackBar,
-    private productsService: ProductsService) { }
+    private productsService: ProductsService
+  ) {}
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
   onPostData() {
-    this.productsService.onPost(this.model.name, this.model.description, this.model.imageUrl, this.model.price, this.model.count)
+    this.productsService
+      .onPost(
+        this.model.name,
+        this.model.description,
+        this.model.imageUrl,
+        this.model.price,
+        this.model.count
+      )
       .subscribe(
         (response: any) => {
           //console.log(response);
           this.snackBar.open('your item add', 'ok', {
-            duration: 1000
-          })
+            duration: 1000,
+          });
           this.router.navigate(['/login']);
           localStorage.setItem('token', response.token);
         },
-        error => {
+        (error) => {
           // console.log(error);
           this.snackBar.open('error', 'ok', {
-            duration: 1000
+            duration: 1000,
           });
           this.router.navigate(['/products']);
         }
-      )
+      );
   }
   onClearForm() {
     this.PostForm.reset();
@@ -108,5 +115,4 @@ export class ProductsPostComponent implements OnInit {
   onBack() {
     this.router.navigate(['/products']);
   }
-
 }

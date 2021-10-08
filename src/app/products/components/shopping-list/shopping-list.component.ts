@@ -10,7 +10,7 @@ import { BehaviorSubject } from 'rxjs';
 export class ShoppingListComponent implements OnInit {
   shoppingList: Array<ShoppingList> = [];
 
-  constructor(private productService: ProductsService) { }
+  constructor(private productService: ProductsService) {}
 
   ngOnInit(): void {
     this.productService.shopCard$.subscribe((data: any) => {
