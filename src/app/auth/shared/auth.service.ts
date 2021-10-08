@@ -18,10 +18,8 @@ export class AuthService {
  
   constructor(private http: HttpClient) { }
 
-  loginUser(phone: string, password: string){
-    return this.http.post(
-      'https://tavana-node.herokuapp.com/auth/login',{userName: phone, password: password}
-    )
+  loginUser(username: string, password: string) {
+    return this.http.post('https://tavana-node.herokuapp.com/auth/login',{userName: username, password: password});
   }
   registerUser(
     username: string,
@@ -35,15 +33,12 @@ export class AuthService {
     const headers = new HttpHeaders({
       Authorization: "Bearer " + token,
     });
-    let url = "http://37.152.163.82:4800/auth/signup";
-    let body = {
-      username: username,
-      password: password,
-      firstName: firstName,
-      lastName: lastName,
-      phoneNumber: phoneNumber,
-      email: email,
-    };
-    return this.http.post<any>(url, body, { headers });
+    return this.http.post<any>('https://tavana-node.herokuapp.com/auth/signup',{userName: username, password: password});
+  }
+  
+
+  isLogged(){
+    let tok =  localStorage.getItem('token') ;
+    return tok
   }
 }

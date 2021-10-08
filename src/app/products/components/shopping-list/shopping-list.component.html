@@ -1,14 +1,21 @@
 <br /><br /><br />
 <div class="container">
   <div class="row">
-    <div class="col-md-7">
-      <h3><b> Shopping List </b></h3>
-      <ul class="list-group">
-        <li class="list-group-item" *ngFor="let item of shoppingList">
-          {{ item.name }} <br />
-          {{ item.price }} $
-        </li>
-      </ul>
+    <div class="col-md-5" *ngFor="let item of shoppingList">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+        </mat-card-header>
+        <img mat-card-image src="{{item.imageUrl}}" alt="Photo of product" style="left: 50px;">
+        <mat-card-content>
+          <p>
+           {{item.description}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>Delete</button>
+        </mat-card-actions>
+      </mat-card>
     </div>
   </div>
 </div>

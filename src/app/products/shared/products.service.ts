@@ -8,10 +8,11 @@ import { Product } from '../../shared/products.model';
 })
 export class ProductsService {
   shoppingList$: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
+  shopCard$ = new BehaviorSubject<any[]>([]);
+
   public set setShoppingList(v: any) {
     this.shoppingList$.next(v);
   }
-
   public get getShoppingList(): Observable<any> {
     return this.shoppingList$.asObservable();
   }

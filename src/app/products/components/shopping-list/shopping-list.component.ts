@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../shared/products.service';
-
 import { ShoppingList } from '../../../shared/shopping-list.model';
+import { BehaviorSubject } from 'rxjs';
 @Component({
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
@@ -13,9 +13,7 @@ export class ShoppingListComponent implements OnInit {
   constructor(private productService: ProductsService) { }
 
   ngOnInit(): void {
-    // console.log(this.shoppingList);
-
-    this.productService.getShoppingList.subscribe((data) => {
+    this.productService.shopCard$.subscribe((data: any) => {
       this.shoppingList.push(data);
     });
   }

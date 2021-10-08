@@ -19,6 +19,9 @@
 
     font-family: 'Montserrat', sans-serif;
 }
+.row:hover{
+    box-shadow: 0px 6px 6px rgba(236, 236, 236, 0.459);
+}
 mat-card-title, button{
     font-family: 'Montserrat', sans-serif;
 }
@@ -32,7 +35,10 @@ mat-card-title, button{
 #intro{
     margin-bottom: 100px;
 }
+.btn :hover{
+    background-color: rgba(238, 238, 238, 0.657);
 
+}
 /* @media (max-width: 995px) {
     .col-md-6{
           display: block;

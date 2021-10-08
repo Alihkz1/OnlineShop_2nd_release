@@ -13,7 +13,6 @@ export class HeaderComponent implements OnInit {
   private router: Router,
   private route: ActivatedRoute,
   private snackBar: MatSnackBar) { }
-  
   ngOnInit(): void {
     let token = localStorage.getItem('token');
     if (token!= null || token != undefined || token != '') {
@@ -25,17 +24,13 @@ export class HeaderComponent implements OnInit {
   }
  
   onLogOut() {
-
     this.router.navigate(['/login']);
     this.snackBar.open('Logged out','ok',{ 
       duration: 1000
   })
   this.authService.login = false;
   localStorage.removeItem('token');
-
   }
-
-  
   onShoppingList() {
     this.router.navigate(['shopping-list'], {relativeTo: this.route});
   }

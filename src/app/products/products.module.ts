@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyMaterialModule } from '@ngx-formly/material';
 import { MatButtonModule } from '@angular/material/button';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 const routes: Routes = [
   {
     path: '',
@@ -56,6 +57,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     FormlyModule.forRoot(),
     FormlyMaterialModule,
+    MatProgressBarModule,
     RouterModule.forChild(routes),
   ],
   exports: [ProductsComponent, ProductsDetailComponent, ProductsListComponent],

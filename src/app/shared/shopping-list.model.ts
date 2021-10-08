@@ -1,12 +1,12 @@
 export class ShoppingList {
   public name: string;
   public description: string;
-  public imagePath: string;
+  public imageUrl: string;
   public price: number;
-  constructor(name: string, price: number, imagePath:string , description: string) {
+  constructor(name: string, price: number, imageUrl:string , description: string) {
     this.name = name;
     this.description = description;
-    this.imagePath = imagePath;
+    this.imageUrl = imageUrl;
     this.price = price;
   }
 }

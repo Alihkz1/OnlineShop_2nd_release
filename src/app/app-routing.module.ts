@@ -8,6 +8,7 @@ import { ProductsDetailComponent } from './products/components/products-detail/p
 import { ProductsComponent } from './products/components/products.component';
 import { ProductsStartComponent } from './products/products-start.component';
 import { ShoppingListComponent } from './products/components/shopping-list/shopping-list.component';
+import { AuthGuard } from './auth/shared/auth.guard';
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'landing-page', component: LandingPageComponent },
@@ -26,7 +27,8 @@ const routes: Routes = [
   {
     path: 'products',
     loadChildren: () =>
-      import('./products/products.module').then((m) => m.ProductsModule),
+      import('./products/products.module').then((m) => m.ProductsModule) ,
+      canActivate: [AuthGuard],
   },
 ];
 

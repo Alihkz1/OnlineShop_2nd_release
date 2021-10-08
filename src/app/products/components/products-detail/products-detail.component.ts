@@ -31,7 +31,7 @@ export class ProductsDetailComponent implements OnInit {
   }
   onAddToList() {
     this.addedToShoppingList = !this.addedToShoppingList;
-    this.productService.setShoppingList = this.product;
+    this.productService.shopCard$.next(this.product);
     this.snackBar.open('added to shopping-list', 'ok', {
       duration: 1000,
     });

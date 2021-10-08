@@ -1,5 +1,6 @@
-<body>
-  <!--------------------------------->
+<mat-progress-bar mode="indeterminate" *ngIf='!allowButt'></mat-progress-bar>
+
+<body *ngIf='allowButt'>
   <div class="container p-4">
     <div class="row"  id="row1">
       <div class="col-md-3">
@@ -11,8 +12,7 @@
         <carousel [images]="images"> </carousel>
       </div>
     </div>
-
-    <div class="row" style="margin-top: 50px">
+    <div class="row" style="margin-top: 50px" *ngIf="show">
       <div
         class="col-md-4"
         *ngFor="let item of products; let i = index"
