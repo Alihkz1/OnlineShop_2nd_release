@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
+import { DialogContentExampleDialog, RegisterComponent } from './components/register/register.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -10,9 +10,9 @@ import { FormlyModule } from '@ngx-formly/core';
 import { FormlyMaterialModule } from '@ngx-formly/material';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
-
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
-  declarations: [LoginComponent, RegisterComponent],
+  declarations: [LoginComponent, RegisterComponent, DialogContentExampleDialog],
   imports: [
     CommonModule,
     MatIconModule,
@@ -23,6 +23,7 @@ import { MatCardModule } from '@angular/material/card';
     FormlyModule.forRoot(),
     FormlyMaterialModule,
     MatCardModule,
+    MatDialogModule,
   ],
   exports: [LoginComponent, RegisterComponent],
 })

@@ -1,9 +1,13 @@
 mat-toolbar{
   /* background: linear-gradient(to right, #ffffff, #2010ff); */
-  background: rgba(241, 241, 241, 0.335);
+  background: rgb(241, 241, 241);
  height: 50px;
+
+  position: fixed;
+  z-index: 100;
+
 
 }
 body :hover{
   background: rgba(255, 224, 175, 0.335);
-}
+} 

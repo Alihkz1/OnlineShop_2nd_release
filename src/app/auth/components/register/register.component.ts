@@ -3,6 +3,12 @@ import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FormlyFieldConfig } from '@ngx-formly/core';
 import { AuthService } from '../../shared/auth.service';
+import { MatDialog } from '@angular/material/dialog';
+@Component({
+  selector: 'dialog-content-example-dialog',
+  templateUrl: 'dialog-content-example-dialog.html',
+})
+export class DialogContentExampleDialog {}
 
 @Component({
   selector: 'app-register',
@@ -85,7 +91,8 @@ export class RegisterComponent implements OnInit {
       },
     },
   ];
-  constructor(private router: Router, private authService: AuthService) {}
+  constructor(private router: Router, private authService: AuthService,
+    private dialog: MatDialog) {}
 
   ngOnInit(): void {}
   onReg() {
@@ -110,4 +117,12 @@ export class RegisterComponent implements OnInit {
   onGoLog() {
     this.router.navigate(['/login']);
   }
+  openDialog() {
+    const dialogRef = this.dialog.open(DialogContentExampleDialog);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 }
+

@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Subject, BehaviorSubject, Observable } from 'rxjs';
 import { Product } from '../../shared/products.model';
 
 @Injectable({
@@ -8,7 +8,7 @@ import { Product } from '../../shared/products.model';
 })
 export class ProductsService {
   shoppingList$: BehaviorSubject<any[]> = new BehaviorSubject<any[]>([]);
-  shopCard$ = new BehaviorSubject<any[]>([]);
+  shopCard$ = new Subject();
 
   public set setShoppingList(v: any) {
     this.shoppingList$.next(v);

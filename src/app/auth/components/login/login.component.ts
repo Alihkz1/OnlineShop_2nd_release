@@ -8,6 +8,8 @@ import {
   MatSnackBarHorizontalPosition,
   MatSnackBarVerticalPosition,
 } from '@angular/material/snack-bar';
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -49,7 +51,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private authService: AuthService,
-    private _snackBar: MatSnackBar
+    private _snackBar: MatSnackBar,
+   
   ) {}
 
   ngOnInit(): void {}
@@ -75,4 +78,5 @@ export class LoginComponent implements OnInit {
   onGoReg() {
     this.router.navigate(['/register']);
   }
+  
 }

@@ -17,4 +17,7 @@ export class ShoppingListComponent implements OnInit {
       this.shoppingList.push(data);
     });
   }
+  onDelete(){
+    this.shoppingList.unshift();
+  }
 }

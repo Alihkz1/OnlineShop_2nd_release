@@ -13,6 +13,7 @@ export class ProductsComponent implements OnInit {
   products: any[] = [];
   show: boolean = false;
   allowButt = false;
+  isAdmin = false;
   images = [
     {
       path: 'https://wi.wallpapertip.com/wsimgs/81-810604_ida1488-minimalist-phone-wallpaper-4k.jpg',
@@ -43,6 +44,12 @@ export class ProductsComponent implements OnInit {
     let token = localStorage.getItem('token');
     if (token) {
       this.show = true;
+    }
+    if (
+      token !==
+      ''
+    ) {
+      this.isAdmin = true;
     }
   }
   getProduct() {

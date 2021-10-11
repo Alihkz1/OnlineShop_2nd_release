@@ -46,7 +46,7 @@ mat-card mat-card-title {
 }
 mat-card button {
   width: 100%;
-  margin-top: 70px;
+  margin-top: 10px;
   border-radius: 30px;
   background-color: #d8e2fc;
 }

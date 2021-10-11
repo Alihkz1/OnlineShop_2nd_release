@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 #r1{
   background-color: crimson;
@@ -52,4 +52,12 @@ h1,p,h5{
 }
 #row1 .col-3{
   margin-right:70px;
+}
+.add{
+  background-color: rgb(114, 29, 252);
+  height: 35px;
+  width: 800px;
+}
+h1{
+  font-family: 'Montserrat', sans-serif;
 }
